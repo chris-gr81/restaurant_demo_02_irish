@@ -173,13 +173,72 @@ body {
   gap: 0.5rem;
 }
 
+.menu-wrapper {
+  background-color: var(--secondary-background-color);
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+}
+.menu-innercontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.menu-innercontainer .header2 {
+  margin-top: 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+.menu-item {
+  background-color: var(--primary-background-color);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem #00000033;
+  transition: transform 0.2s ease-in-out;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+.menu-item:hover {
+  transform: translateY(-0.2rem);
+}
+
+.menu-item > h3 {
+  font-family: "Uncial Antiqua", serif;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.menu-explanation {
+  color: var(--secondary-text-color);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.price {
+  display: block;
+  color: var(--primary-text-color);
+  margin-top: 0.75rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
 .openhours-wrapper {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(./img/info.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 3rem 0;
+  margin-bottom: 3rem;
   padding: 2rem 0;
 }
 
@@ -292,6 +351,10 @@ body {
   .openhours {
     margin: 4rem 0;
   }
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-innercontainer {
     flex-direction: row;
     align-items: center;
@@ -336,8 +399,21 @@ body {
   .about-pics-double {
     gap: 1rem;
   }
+  .menu-wrapper {
+    padding-bottom: 4rem;
+  }
+  .menu-item > h3 {
+    font-size: 1.8rem;
+  }
+
+  .menu-explanation {
+    font-size: 0.9rem;
+  }
+  .price {
+    font-size: 1.8rem;
+  }
   .openhours-wrapper {
-    margin: 8rem 0;
+    /* margin: 8rem 0; */
     padding: 6rem 0;
   }
   .content > .header2 {
@@ -349,7 +425,9 @@ body {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
   }
-
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .contact-pic {
     width: 50%;
   }
