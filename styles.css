@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap");
 
 * {
   margin: 0;
@@ -12,12 +12,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  --primary-color: #ff3030;
-  --primary-text-color: #fff;
-  --secondary-text-color: #ddd;
+  --primary-color: #4b6642;
+  --primary-text-color: #e8d4b4;
+  --secondary-text-color: #cfb897;
+  --primary-background-color: #0e130a;
+  --secondary-background-color: #1a2415;
 
-  font-family: "Inter", sans-serif;
-  background-color: #1a1a1a;
+  font-family: "Nunito", serif;
+  background-color: var(--primary-background-color);
   color: var(--primary-text-color);
 }
 
@@ -96,7 +98,11 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 10%,
+      rgba(0, 0, 0, 0.8) 80%
+    ),
     url(./img/hero.jpg);
   background-position: center;
   background-size: cover;
@@ -104,7 +110,7 @@ body {
 }
 
 .title {
-  font-family: "lobster", serif;
+  font-family: "Uncial Antiqua", serif;
   font-weight: 400;
   font-size: 3rem;
   line-height: 3rem;
@@ -150,6 +156,11 @@ body {
   display: flex;
   gap: 0.5rem;
   object-fit: cover;
+}
+
+.pic3filter {
+  filter: brightness(0.65) contrast(1.2) sepia(0.45) saturate(0.9)
+    hue-rotate(-5deg);
 }
 
 .about-pics-single {
@@ -233,7 +244,7 @@ body {
   margin-top: 2rem;
   padding: 2rem 1rem;
   font-size: 0.8rem;
-  background-color: #303030;
+  background-color: var(--secondary-background-color);
   gap: 1rem;
 }
 
