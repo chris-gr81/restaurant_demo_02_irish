@@ -192,6 +192,7 @@ body {
   gap: 1.5rem;
   grid-template-columns: 1fr;
   align-items: stretch;
+  justify-content: center;
 }
 .menu-item {
   background-color: var(--primary-background-color);
@@ -201,6 +202,8 @@ body {
   box-shadow: 0 0.25rem 0.5rem #00000033;
   transition: transform 0.2s ease-in-out;
   max-width: 15rem;
+
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: space-between;
