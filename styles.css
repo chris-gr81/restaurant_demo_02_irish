@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* GENERAL STYLES ------------------------------------ */
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  --primary-color: #ff3030;
+  --primary-text-color: #fff;
+  --secondary-text-color: #ddd;
+
+  font-family: "Inter", sans-serif;
+  background-color: #1a1a1a;
+  color: var(--primary-text-color);
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.abutton-positiv,
+.abutton-negativ {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 1px solid var(--primary-color);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  width: fit-content;
+}
+
+.abutton-positiv {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.abutton-positiv:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.abutton-negativ {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.abutton-negativ:hover {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
+.header2 {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  width: fit-content;
+  border-bottom: 1px solid var(--primary-color);
+}
+.navigation,
+.navigation-foot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  height: 5rem;
+  gap: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.navigationitem {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.navigationitem:hover {
+  color: var(--primary-color);
+}
+/* SPECIFIC STYLES ---------------------------------- */
+
+.herosection {
+  display: flex;
+  height: calc(100vh - 5rem);
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(./img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  font-family: "lobster", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--secondary-text-color);
+}
+
+.hero-link {
+  margin-top: 4rem;
+}
+
+.about {
+  display: grid;
+  gap: 2rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-text > .header2 {
+  margin: 2rem 0 1rem 0;
+}
+
+.about-text > p {
+  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+}
+
+.about-link {
+  margin: 2rem 0 1rem 0;
+}
+
+.about-pics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 0.5rem;
+  object-fit: cover;
+}
+
+.about-pics-single {
+  min-width: 50%;
+}
+
+.about-pics-double {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.openhours-wrapper {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(./img/info.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+
+.openhours-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 85%;
+}
+
+.openhours-content > .header2 {
+  margin: 0 0 1rem 0;
+}
+
+.opening-row {
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.day {
+  color: var(--secondary-text-color);
+}
+
+.contact-innercontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-pic {
+  width: 100%;
+  height: 100%;
+  min-width: 50%;
+  object-fit: cover;
+}
+
+.contact-data > .header2 {
+  margin: 0 0 1rem 0;
+}
+
+.adress {
+  margin-top: 0.5rem;
+  color: var(--secondary-text-color);
+}
+
+.contact-menu {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  background-color: #303030;
+  gap: 1rem;
+}
+
+.navigation-foot {
+  flex-direction: column;
+  gap: 1rem;
+}
+.copyright {
+  color: var(--secondary-text-color);
+  margin-top: 1rem;
+}
+
+/* MEDIA QUERIES ------------------------------------- */
+/* Tablets */
+@media screen and (min-width: 600px) {
+  .abutton-positiv,
+  .abutton-negativ {
+    padding: 1.2rem 2.5rem;
+  }
+  .navigation,
+  .navigation-foot {
+    gap: 2rem;
+    font-size: 1rem;
+  }
+  .navigation-foot {
+    height: 1rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .herolink {
+    padding: 1.2rem 2.5rem;
+  }
+  .weare {
+    font-size: 1rem;
+  }
+
+  .openhours {
+    margin: 4rem 0;
+  }
+  .contact-innercontainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-pic {
+    width: 60%;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    gap: 3rem;
+  }
+  .navigation-foot {
+    flex-direction: row;
+  }
+}
+
+/* Normal Computer */
+@media screen and (min-width: 1000px) {
+  .navigation {
+    gap: 4rem;
+  }
+
+  .title {
+    font-size: 6rem;
+    line-height: 6.5rem;
+  }
+
+  .header2 {
+    font-size: 2rem;
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  .about-pics,
+  .about-pics-double {
+    gap: 1rem;
+  }
+  .openhours-wrapper {
+    margin: 8rem 0;
+    padding: 6rem 0;
+  }
+  .content > .header2 {
+    margin-bottom: 2rem;
+  }
+
+  .opening-row {
+    width: 20rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-pic {
+    width: 50%;
+  }
+
+  .contact-data > .header2 {
+    margin-bottom: 2rem;
+  }
+
+  .adress {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .contact-menu {
+    flex-direction: row;
+  }
+  .footer {
+    margin-top: 6rem;
+  }
+  .navigation-foot {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
